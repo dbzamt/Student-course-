@@ -1,0 +1,49 @@
+
+
+<%= form_for(@student, :url => {:action => 'update', :id => @student.id}) do %>
+  <div class="form-horizontal">
+                        <div class="form-group">
+                            <label for="Name" class="col-sm-3" control-label">Name : </label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="Name" placeholder="Name"
+                                value="<%=@student.Name%>"  name="student[Name]">
+                            </div>
+                        </div>
+                       
+                        <div class="form-group row">
+                          <label for="DOB" class="col-sm-3">DOB:</label>
+                              <div class="col-sm-9">
+                                <input class="form-control" type="date"  id="DOB" value="<%=@student.DOB%>" name="student[DOB]">
+                              </div>
+                        </div>
+                        
+
+                         <div class="form-group">
+                            <label for="Mobile" class="col-sm-3" control-label>Mobile No:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="Mobile" value="<%=@student.Phone_No%>" name="student[Phone_No]">
+                            </div>
+                        </div>
+
+                         <div class="form-group">
+                            <label for="email" class="col-sm-3" control-label>email:</label>
+                            <div class="col-sm-9">
+                                <input type="email" id="email" class="form-control" value="<%=@student.email%>" name="student[email]">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Courses" class="col-sm-3">Courses:</label>
+                            <div class="col-sm-9">
+                              <select class="form-control" id="Courses" class="col-sm-9" value="<%=@student.course%>" name="student[course]">
+                                <option>JAVA</option>
+                                <option>RUBY</option>
+                                <option>.net</option>
+                              </select>
+                          </div>
+                        </div>
+
+                    </div>
+ <%= submit_tag("Update Subject") %>
+<% end %>
+

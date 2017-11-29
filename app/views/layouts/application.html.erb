@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Students Details</title>
+    <%= csrf_meta_tags %>
+<!-- <link rel="stylesheet" href="/home/amit/Desktop/Rails/studentInf/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     -->
+
+     <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+   <!-- <script src="/home/amit/Desktop/Rails/studentInfo/app/assets/javascripts/bootstrap.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script> -->
+
+  </head>
+
+  <body>
+  <!-- NavBAr -->
+  <%= render 'home/navbar'%>
+
+ <div class="container">
+
+  		
+  
+    <%= yield %>
+
+    <!-- Button trigger modal -->
+	<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+	  Launch demo modal
+	</button> -->
+
+	<!-- Modal -->
+
+	  <%= render 'home/new_student_form'%>
+
+	  <%= render 'home/edit_student_form'%>
+	
+ </div>
+  </body>
+</html>
